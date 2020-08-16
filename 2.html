@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url(https://picsum.photos/id/1015/800/1000);
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row  justify-content-center align-items-center rounded" style="height:100vh">
+            <div class="col-12 col-md-4 bg-white" style="height:80%">
+                <div class="row justify-content-center align-items-center mt-4 "
+                    style="font-size:20px; font-weight:bold">Login Form</div>
+                <div class="row m-2 form-group" style="font-size:18px;">Username</div>
+                <div class="form-group m-2"><input type="text" id="inputbox1" class="form-control" minlength="3"
+                        maxlength="12" placeholder="enter your username">
+                </div>
+                <div class="row m-2 form-group" style="font-size:18px;">Password</div>
+                <div class="form-group m-2"><input type="password" id="inputbox2" class="form-control" minlength="5"
+                        maxlength="12" placeholder="enter your password">
+                </div>
+                <div class="row m-2 form-group" style="font-size:18px;">Email</div>
+                <div class="form-group m-2"><input type="email" id="inputbox3" class="form-control"
+                        placeholder="enter your mail">
+
+                </div>
+                <div class="form-group  mt-4">
+                    <button class="btn btn-danger btn-block" onclick=" return validateform()">submit</button>
+                </div>
+                <div id="userinfo" style="font-weight: bold;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function validateform() {
+            let user = document.getElementById("inputbox1").value;
+            let pass = document.getElementById("inputbox2").value;
+            let mail = document.getElementById("inputbox3").value;
+            if (user == "" || user == null) {
+                alert("username cant be empty");
+                document.getElementById("inputbox1").focus();
+                return false;
+            }
+            if (pass == "" || pass == null) {
+                alert(" invalid password ");
+                document.getElementById("inputbox2").focus();
+                return false;
+            }
+            if (mail == "" || mail == null) {
+                alert(" plz enter your mail ");
+                document.getElementById("inputbox3").focus();
+                return false;
+            }
+
+
+            document.getElementById("userinfo").innerHTML = `username : ${user}    password: ${pass}  email Id : ${mail}`;
+
+
+            document.getElementById("inputbox3").value = "";
+            document.getElementById("inputbox2").value = "";
+            document.getElementById("inputbox1").value = "";
+
+        }
+    </script>
+</body>
+
+</html>

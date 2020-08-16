@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row bg-dark sticky-top" style="height:65px;">
+            <div class="col-3 text-light d-flex justify-align-center align-items-center" style="font-size:18px;">Dacbook
+            </div>
+            <div class="col-6 mt-2 form-group d-flex align-items-center justify-content-center">
+                <div class=col-10><input type="text" class="form-control" placeholder="post Something here"
+                        id="inputbox"></div>
+                <div class="col-2"><button class="btn btn-dark btn-outline-danger text-light btn-block"
+                        onclick="handlepost()">Post</button>
+                </div>
+            </div>
+            <div class="col-3 text-light d-flex justify-content-end align-items-center" style="font-size:18px;">
+                <button class="btn btn-primary">Logout</button>
+            </div>
+
+        </div>
+        <div class="row justify-content-center align-items-center" id="userbox" style="height:200px;">
+            <div class="col-12 col-md-6  bg-primary rounded d-flex justify-content-center align-items-center"
+                id="userbox1" style="height:90%">
+                Post Something Here1
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center" style="height:200px;">
+            <div class="col-12 col-md-6 bg-primary rounded d-flex justify-content-center align-items-center"
+                style="height:90%">
+                Post Something Here2
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center" style="height:200px;">
+            <div class="col-12 col-md-6 bg-primary rounded d-flex justify-content-center align-items-center"
+                style="height:90%">
+                Post Something Here1
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center" style="height:200px;">
+            <div class="col-12 col-md-6 bg-primary rounded d-flex justify-content-center align-items-center"
+                style="height:90%">
+                Post Something Here1
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center" style="height:200px;">
+            <div class="col-12 col-md-6 bg-primary rounded d-flex justify-content-center align-items-center"
+                style="height:90%">
+                Post Something Here1
+            </div>
+        </div>
+    </div>
+    <!-- <script>
+        function handlepost() {
+            let usercmt = document.getElementById("inputbox").value;
+            let newEle = document.getElementById("userbox1").cloneNode(true);
+            newEle.innerHTML = usercmt;
+            newEle.style.visibility = "visible";
+            newEle.style.color = "light";
+
+            let commentbox = document.getElementById("userbox");
+            commentbox.insertBefore(newEle, commentbox.firstChild);
+        }
+    </script> -->
+</body>
+
+</html>
